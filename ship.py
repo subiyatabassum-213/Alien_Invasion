@@ -12,6 +12,8 @@ class Ship:
 
         image_path = os.path.join('images', 'ship.bmp')
         self.image = pygame.image.load(image_path)
+        self.image = pygame.transform.smoothscale(self.image, (120, 80))
+
         self.rect = self.image.get_rect()
 
         self.rect.midbottom = self.screen_rect.midbottom
